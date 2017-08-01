@@ -9,7 +9,7 @@
      * junit-4.12
      * selenium-server-satndalone-3.4.0
 
-### Jar adn chrome driver resources:
+### Jar and chrome driver resources:
 * http://docs.seleniumhq.org/download/
 * https://sites.google.com/a/chromium.org/chromedriver/downloads
 * <http://search.maven.org/#search|gav|1|g:"org.hamcrest" AND a:"hamcrest-core">
