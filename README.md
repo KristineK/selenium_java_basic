@@ -1,7 +1,8 @@
 ### Summary
-1. Open git bash and fo: `git clone https://github.com/KristineK/new_project.git`
-2. Open path to `new_project` which you just cloned
-3. Check in project structure, that:
+1. On C:/ create new folder "bootcamp"
+2. In folder "bootcamp" open git bash and fo: `git clone https://github.com/KristineK/new_project.git`
+3. Open path to `new_project` which you just cloned
+4. Check in project structure, that:
    * Project has Project SDK: 1.8
    * Modules has "new_project" with "src" folder selected as "Sources"
    * Libraries has all the jars from "lib" folder:
