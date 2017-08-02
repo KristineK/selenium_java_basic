@@ -75,7 +75,7 @@ public class Sample2 {
         driver.get("https://kristinek.github.io/test-sample/examples/loc");
         // From page:
         // <h1 id="heading">Base page</h1>
-        System.out.println(driver.findElement(By.className("text")).getText()); // "Base page"
+        System.out.println(driver.findElement(By.className("text")).getText()); // "sample text 1"
         driver.close();
     }
 
