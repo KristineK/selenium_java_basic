@@ -6,7 +6,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class Sample2 {
     WebDriver driver;
@@ -66,9 +69,41 @@ public class Sample2 {
     @Test
     public void findElementByClassFirst() throws Exception {
 
-        // From page:
-        // <h1 id="heading">Base page</h1>
         System.out.println(driver.findElement(By.className("text")).getText()); // "sample text 1"
     }
+
+//    findElementByClassAll (where you find elements by className “text” and
+// then printout number of elements // 5�
+// the text of this elements // “sample text 1”; “sample text 2”; “unbelievable sample text”; “amazing sample text”; “dummy text”�
+// (3rd element) // "unbelievable sample text"
+    @Test
+    public void findElementByClassAll() throws Exception {
+        System.out.println(driver.findElements(By.id("headingasdga")).size()); // 0
+        System.out.println(driver.findElements(By.className("text")).size()); // 5
+        List <WebElement> allElementsWithClass = driver.findElements(By.className("text"));
+
+        for (WebElement elementWithClass : allElementsWithClass) {
+            System.out.println(elementWithClass.getText());
+//            sample text 1
+//            sample text 2
+//            unbelievable sample text
+//            amazing sample text
+//            dummy text
+        }
+        System.out.println(driver.findElements(By.className("text")).get(2).getText()); // "unbelievable sample text"
+    }
+
+
+    @Test
+    public void findElementByXPath() throws Exception {
+
+    }
+
+    @Test
+    public void findElementByCssName() throws Exception {
+
+    }
+//            findElementByXPath (where you find element by xpath “//div[@id='nonStandartText']/*[contains(@class, 'amazing')]” and then printout the text of this element // amazing sample text�where you find element by xpath “//p[@class='text' and @id='dummy']” and then printout the text of this element) �// dummy text
+//            findElementByCssName (where you find element by css “div#nonStandartText > .amazing” and then printout the text of this element // amazing sample text�where you find element by css “.text#dummy” and then printout the text of this element) // dummy text/
 
 }
