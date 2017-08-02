@@ -51,4 +51,5 @@ Create a  new test method:
 Push all your changes to git
 
 All implementation: [Sample2.java](../master/src/selenium/sample2/Sample2.java)
+
 Small test: https://goo.gl/forms/6AZsHBnvBPkfjuOp2
