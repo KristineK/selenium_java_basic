@@ -93,17 +93,32 @@ public class Sample2 {
         System.out.println(driver.findElements(By.className("text")).get(2).getText()); // "unbelievable sample text"
     }
 
+//            findElementByXPath (where you find element by xpath
+// “//div[@id='nonStandartText']/*[contains(@class, 'amazing')]” and then printout the text of this element
+// amazing sample text�
+// where you find element by xpath “//p[@class='text' and @id='dummy']” and then printout the text of this element) �
+// dummy text
 
     @Test
     public void findElementByXPath() throws Exception {
+        System.out.println(
+                driver.findElement(By.xpath("//div[@id='nonStandartText']/*[contains(@class, 'amazing')]")).getText());
+        // amazing sample text
 
+        System.out.println(
+                driver.findElement(By.xpath("//p[@class='text' and @id='dummy']")).getText());
+        // dummy text
     }
+//            findElementByCssName (where you find element by css “div#nonStandartText > .amazing” and then printout the text of this element // amazing sample text�
+// where you find element by css “.text#dummy” and then printout the text of this element) // dummy text/
 
     @Test
     public void findElementByCssName() throws Exception {
+        System.out.println(
+                driver.findElement(By.cssSelector("div#nonStandartText > .amazing")).getText());
+        System.out.println(
+                driver.findElement(By.cssSelector(".text#dummy")).getText());
 
     }
-//            findElementByXPath (where you find element by xpath “//div[@id='nonStandartText']/*[contains(@class, 'amazing')]” and then printout the text of this element // amazing sample text�where you find element by xpath “//p[@class='text' and @id='dummy']” and then printout the text of this element) �// dummy text
-//            findElementByCssName (where you find element by css “div#nonStandartText > .amazing” and then printout the text of this element // amazing sample text�where you find element by css “.text#dummy” and then printout the text of this element) // dummy text/
 
 }
