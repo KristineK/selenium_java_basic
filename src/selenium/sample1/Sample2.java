@@ -64,5 +64,20 @@ public class Sample2 {
             driver.close();
         }
 
+    @Test
+    public void findElementByClassFirst() throws Exception {
+        // from Sample 1
+        String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        //open google homepage
+        driver.get("https://kristinek.github.io/test-sample/examples/loc");
+        // From page:
+        // <h1 id="heading">Base page</h1>
+        System.out.println(driver.findElement(By.className("text")).getText()); // "Base page"
+        driver.close();
+    }
+
 //        findElementByClassFirst (where you find element by className “text” and then printout the text of this element)
 }
