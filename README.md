@@ -51,3 +51,15 @@ Create a  new test method:
 Push all your changes to git
 
 Small test: https://goo.gl/forms/6AZsHBnvBPkfjuOp2
+
+### Activity 3
+Create new “Sample3.java”Note page to use “Page Examples” -> “Locators” (https://kristinek.github.io/test-sample/examples/loc)
+Create a  new test method:
+1) assertEqualsExample (where you compare text "Base page“ with text from element with id “heading” via “assertEquals”where you check that the number of items with class name “text” is 5 via “assertEquals”)
+2) assertTrueExample (assertTrue with “String.equals()”, “String.contains()”, “String. equalsIgnoreCase()”)
+3) assertFalseExample (assertFalse with “!String.equals()”, “String.equals(“not”)”, “String. contains(“not”)”)
+4) failExampleWithDefaultError (see how fail() works)
+5) failExampleWithCustomError (see how fail(“w/m”) works)
+6) assertEqualsExampleWithDefaultError (try { assertEquals(exp, act) } catch (ComparisonFailure e) { System.err.println(); e.printStackTrace(); } )
+7) assertEqualsExampleWithCustomError (try { assertEquals(“custom message”, ext, act) } catch (ComparisonFailure e) { System.err.println(); e.printStackTrace(); })
+Push all your changes to git
