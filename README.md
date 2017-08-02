@@ -32,10 +32,10 @@ Open in browser https://github.com/KristineK/new_project
 (the link should have also send send to you via email)
 
 Try:
-1) Running sample1 as jUnit and see output
+1) Running [Sample1](../master/src/selenium/sample1/Sample1.java) as jUnit and see output
 2) Debug Sample1 with breakpoints
 3) Change the URL, run and see how output changes
-4) Commit our changes to git in our branch (<name_surname>)
+4) Commit our changes to git in our branch (<name_surname>) (see summary step 5 above)
 
 ### Activity 2
 Create new “Sample2.java”Note page to use “Page Examples” -> “Locators” (https://kristinek.github.io/test-sample/examples/loc)
@@ -51,6 +51,8 @@ Create a  new test method:
 Push all your changes to git
 
 Small test: https://goo.gl/forms/6AZsHBnvBPkfjuOp2
+
+All implementation: [Sample2.java](../master/src/selenium/sample2/Sample2.java)
 
 ### Activity 3
 Create new “Sample3.java”Note page to use “Page Examples” -> “Locators” (https://kristinek.github.io/test-sample/examples/loc)

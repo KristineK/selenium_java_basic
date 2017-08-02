@@ -1,4 +1,4 @@
-package selenium.sample1;
+package selenium.sample2;
 
 import org.junit.After;
 import org.junit.Before;
