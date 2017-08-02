@@ -15,7 +15,7 @@ public class Sample1 {
         WebDriver driver = new ChromeDriver();
 
         //open google homepage
-        driver.get("https://kristinek.github.io/test-sample/");
+        driver.get("https://google.com/");
 
         //get title of page
         System.out.println(driver.getTitle());
