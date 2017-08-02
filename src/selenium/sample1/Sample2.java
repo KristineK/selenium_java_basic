@@ -22,7 +22,7 @@ public class Sample2 {
             // org.openqa.selenium.NoSuchElementException:
             // no such element:
             // Unable to locate element: {"method":"id","selector":"headingasdga"}
-            driver.quit();
+            driver.close();
         }
 
 //        findElementByName (where you find element by name
@@ -44,7 +44,7 @@ public class Sample2 {
             System.out.println(driver.findElement(By.name("randomButton")).getAttribute("id")); // empty
 //            Unable to locate element: {"method":"name","selector":"randomButton123"}:
             System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
-            driver.quit();
+            driver.close();
         }
 
 //        findElementByTagName (where you find element by tagName “h1” and then printout “id” attribute of this element)
@@ -61,7 +61,7 @@ public class Sample2 {
             // <h1 id="heading">Base page</h1>
             System.out.println(driver.findElement(By.tagName("h1")).getAttribute("id")); // "heading"
             System.out.println(driver.findElement(By.tagName("h1")).getText()); // "Base page"
-            driver.quit();
+            driver.close();
         }
 
 //        findElementByClassFirst (where you find element by className “text” and then printout the text of this element)
