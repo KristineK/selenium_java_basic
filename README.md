@@ -65,3 +65,5 @@ Create a  new test method:
 6) assertEqualsExampleWithDefaultError (try { assertEquals(exp, act) } catch (ComparisonFailure e) { System.err.println(); e.printStackTrace(); } )
 7) assertEqualsExampleWithCustomError (try { assertEquals(“custom message”, ext, act) } catch (ComparisonFailure e) { System.err.println(); e.printStackTrace(); })
 Push all your changes to git
+
+All implementation: [Sample3.java](../master/src/selenium/sample3/Sample3.java)
