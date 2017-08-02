@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Sample2 {
 
         @Test
-        public void findElementByID() {
+        public void findElementByID() throws Exception {
             // from Sample 1
             String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
             System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
@@ -28,7 +28,7 @@ public class Sample2 {
 //        findElementByName (where you find element by name
 // “randomButton” and then printout “value” attribute of this element)
         @Test
-        public void findElementByName() {
+        public void findElementByName() throws Exception {
             // from Sample 1
             String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
             System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
@@ -46,4 +46,23 @@ public class Sample2 {
             System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
             driver.quit();
         }
+
+//        findElementByTagName (where you find element by tagName “h1” and then printout “id” attribute of this element)
+        @Test
+        public void findElementByTagName() throws Exception {
+            // from Sample 1
+            String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
+            System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+            WebDriver driver = new ChromeDriver();
+
+            //open google homepage
+            driver.get("https://kristinek.github.io/test-sample/examples/loc");
+            // From page:
+            // <h1 id="heading">Base page</h1>
+            System.out.println(driver.findElement(By.tagName("h1")).getAttribute("id")); // "heading"
+            System.out.println(driver.findElement(By.tagName("h1")).getText()); // "Base page"
+            driver.quit();
+        }
+
+//        findElementByClassFirst (where you find element by className “text” and then printout the text of this element)
 }
