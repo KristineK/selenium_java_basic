@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,6 +11,8 @@ public class Smaple2 {
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://kristinek.github.io/test-sample/examples/loc");
+        System.out.println(driver.findElement(By.id("heading")).getText());
+        driver.quit();
 
     }
     public void findElementByName(){
