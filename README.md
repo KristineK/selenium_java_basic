@@ -37,9 +37,12 @@ Try:
 ### Activity 2
 Create new “Sample2.java”Note page to use “Page Examples” -> “Locators” (https://kristinek.github.io/test-sample/examples/loc)
 Create a  new test method:
-1) findElementByID (where you find element by id “heading” and then printout the text of this element) 
-2) findElementByName (where you find element by name “randomButton” and then printout “value” attribute of this element) 
-3) findElementByTagName (where you find element by tagName “h1” and then printout “id” attribute of this element) 
-4) findElementByClassFirst (where you find element by className “text” and then printout the text of this element) 
+1) findElementByID (where you find element by id “heading” and then printout the text of this element)  // "Base page"
+2) findElementByName (where you find element by name “randomButton” and then printout “value” attribute of this element)  // "This is a button"
+3) findElementByTagName (where you find element by tagName “h1” and then printout “id” attribute of this element)  // "heading"
+4) findElementByClassFirst (where you find element by className “text” and then printout the text of this element) // "sample text 1"
+5) findElementByClassAll (where you find elements by className “text” and then printout number of elements // 5the text of this elements  // “sample text 1”; “sample text 2”; “unbelievable sample text”; “amazing sample text”; “dummy text”3rd element) // "unbelievable sample text"
+6) findElementByXPath (where you find element by xpath “//div[@id='nonStandartText']/*[contains(@class, 'amazing')]” and then printout the text of this element // amazing sample textwhere you find element by xpath “//p[@class='text' and @id='dummy']” and then printout the text of this element) // dummy text
+7) findElementByCssName  (where you find element by css “div#nonStandartText > .amazing” and then printout the text of this element // amazing sample textwhere you find element by css “.text#dummy” and then printout the text of this element) // dummy text
 
 Push all your changes to git
