@@ -49,3 +49,5 @@ Create a  new test method:
 7) findElementByCssName  (where you find element by css “div#nonStandartText > .amazing” and then printout the text of this element // amazing sample textwhere you find element by css “.text#dummy” and then printout the text of this element) // dummy text
 
 Push all your changes to git
+
+Small test: https://goo.gl/forms/6AZsHBnvBPkfjuOp2
