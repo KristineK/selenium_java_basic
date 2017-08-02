@@ -24,6 +24,9 @@ Note: replace <name_surname> with your name and surname
 * <http://search.maven.org/#search|gav|1|g:"org.hamcrest" AND a:"hamcrest-core">
 * https://sites.google.com/a/chromium.org/chromedriver/downloads
 
+### Feedback
+https://trello.com/invite/b/9QTLgFRZ/ddbdbdc4a703f1b72f6570704c76ad23/bootcamp
+
 ### Activity 1
 Open in browser https://github.com/KristineK/new_project
 (the link should have also send send to you via email)
