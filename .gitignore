@@ -1,0 +1,5 @@
+.idea/*
+.idea/workspace.xml
+out/
+phantomjsdriver.log
+*.jpg
