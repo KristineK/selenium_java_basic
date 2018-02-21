@@ -43,6 +43,16 @@ public class Sample5Task {
 //        verify alert text
 //        click ok on second alert
 //        verify that the correct page is opened
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        Alert alert2 = driver.switchTo().alert();
+        assertEquals("Booooooooo!", alert2.getText());
+        alert2.accept();
+        assertTrue("https://kristinek.github.io/test-sample/examples/al_p".equals(
+                driver.getCurrentUrl()));
+        System.out.println();
+
     }
 
     @Test
@@ -52,5 +62,11 @@ public class Sample5Task {
 //        switch to alert
 //        click cancel
 //        verify the text on page
+        driver.findElement(By.className("w3-blue")).click();
+        Alert alert = driver.switchTo().alert();
+        assertEquals("Want to see an alerted page?!", alert.getText());
+        alert.dismiss();
+        assertEquals("So you desided to say? Good!",
+                driver.findElement(By.id("textForAlerts")).getText());
     }
 }

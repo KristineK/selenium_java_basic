@@ -37,6 +37,7 @@ public class Sample4Task {
     public void enterNumber() throws Exception {
 //        TODO
 //        enter a number under "Number"
+
 //        click on "Result" button
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
 //        check that the button "Clear Result" is active now
