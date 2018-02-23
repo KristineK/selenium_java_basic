@@ -1,47 +1,32 @@
 package selenium.tasks;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task3 {
-    WebDriver driver;
+    static WebDriver driver;
 
     @Before
-    public void openPage(){
+    public static void openPage() {
         String libWithDriversLocation =  System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://kristinek.github.io/test-sample/tasks/task2");
+        driver.get("https://kristinek.github.io/test-sample/tasks/task4");
     }
 
     @After
-    public void closeBrowser(){
-        driver.close();
+    public static void closeBrowser(){
+        driver.quit();
     }
 
     @Test
-    public void loadGreen(){
-		/* TODO:
-		 * 1) click on start loading green button
-		 * 2) check that button does not appear, but loading text is seen instead
-		 * 3) check that both button and loading text is not seen, success is seen instead
-		 */
+    public void feedback() {
+//        fill in "name", "age", select 1 or more language, select genre, select option, add a comment
+//        check that the button send is blue with white letters
+//        click "send"
+//        check that the feedback was filled correctly
+//        check that then
+//        check that the button yes is green and no is red but both have white letters
     }
-
-    @Test
-    public void loadGreenAndBlue(){
-		/* TODO:
-		 * 0) wait until button to load green and blue appears
-		 * 1) click on start loading green and blue button
-		 * 2) check that button does not appear, but loading text is seen instead for green
-		 * 3) check that button does not appear, but loading text is seen instead for green and blue
-		 * 4) check that button and loading green does not appear,
-		 * 		but loading text is seen instead for blue and success for green is seen
-		 * 5) check that both button and loading text is not seen, success is seen instead
-		 */
-    }
-
 }
