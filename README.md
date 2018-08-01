@@ -1,39 +1,33 @@
 ### Setup
-1. On C:/ create new folder "bootcamp"
-2. In folder Desktop open git bash and fo: `git clone https://github.com/KristineK/new_project.git`
-3. In IDEA open project `new_project` from "C:/Users/Student/Desktop/new_project"
-4. In IDEA check in project structure, that:
+1. In IDEA open project `new_project` from "C:/Users/Student/Desktop/new_project"
+2. In IDEA check in project structure, that:
    * Project has Project SDK: 1.8
    * Modules has "new_project" with "src" folder selected as "Sources"
    * Libraries has all the jars from "lib" folder:
      * hamcrest-core-1.3
      * junit-4.12
      * selenium-server-standalone-3.4.0
-5. In git bash do `git checkout -b branch_name`
+3. Pull the latest changes:
+   ![Alt text](img/git_pull.png?raw=true "git pull via IDEA")
+5. Create a branch:
+   ![Alt text](img/git_new_branch_1.png?raw=true "git new branch 1 via IDEA")
+   ![Alt text](img/git_new_branch_2.png?raw=true "git new branch 2 via IDEA")
+   ![Alt text](img/git_new_branch_3.png?raw=true "git new branch 3 via IDEA")
 
 Note: replace branch_name with your name and surname (NO SPACES)
 
 ---
 ### How to add, commit and push changes to 
 Open git bash from project folder (new_project) and do:
-   * `git add  src/selenium/sample1/Sample1.java` for adding 1 file or `git add .` for all the changes files
-   * `git commit -m "increase sleep"`
-   * `git push origin branch_name`
+   ![Alt text](img/git_add.png?raw=true "git add via IDEA")
+   ![Alt text](img/git_commit_1.png?raw=true "git commit 1 via IDEA")
+   ![Alt text](img/git_commit_2.png?raw=true "git commit 2 via IDEA")
+   ![Alt text](img/git_commit_3.png?raw=true "git commit 3 via IDEA")
+   ![Alt text](img/git_push_1.png?raw=true "git push 1 via IDEA")
+   ![Alt text](img/git_push_2.png?raw=true "git push 2 via IDEA")
    
 Note: replace branch_name with your name and surname (NO SPACES)
   
-### How to switch to your branch from other laptop
-1. open git bash where you would like to open have project (see step 1 in setup)
-2. clone project (see step 2 in setup)
-3. write in bash:
-```
-git fetch origin
-git checkout -b branch_name origin/branch_name
-git pull
-```
-
-Note: if you are pushing from 2 laptops, after push on one laptop, do pull on the other before making any changes (or be ready for git conflics, which you will google how to resolve)
-
 ---
 ### Feedback
 
