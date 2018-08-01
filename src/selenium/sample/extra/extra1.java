@@ -69,12 +69,12 @@ public class extra1 {
     @Test
     public void refresh() throws Exception {
         String originalText = "This is a text box";
-        WebElement getTextBox = driver.findElement(By.id("vfb-9"));
+        WebElement getTextBox = driver.findElement(By.name("vfb-5"));
         assertEquals(base_url, driver.getCurrentUrl());
         assertEquals(getTextBox.getAttribute("value"), originalText);
-        driver.findElement(By.id("vfb-9")).sendKeys(" asd");
+        getTextBox.sendKeys(" asd");
         assertEquals(getTextBox.getAttribute("value"), originalText + " asd");
         driver.navigate().refresh();
-        assertEquals(getTextBox.getAttribute("value"), originalText);
+        assertEquals( driver.findElement(By.name("vfb-5")).getAttribute("value"), originalText);
     }
 }
