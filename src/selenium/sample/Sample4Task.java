@@ -37,25 +37,43 @@ public class Sample4Task {
     public void enterNumberWithInt() throws Exception {
         WebElement enterNumber = driver.findElement(By.id("number"));
         WebElement resultButton = driver.findElement(By.id("result_button_number"));
-        WebElement result = driver.findElement(By.id("result_number"));
+        WebElement resultText = driver.findElement(By.id("result_number"));
         WebElement clearButton = driver.findElement(By.id("clear_result_button_number"));
         int number = 67;
-        String stringNumber2 = "You entered number: ";
+        String stringNumber2 = String.format("You entered number: \"%d\"", number);
 
+//        enter a number under "Number"
         enterNumber.clear();
         assertEquals(enterNumber.getAttribute("value"), "");
         enterNumber.sendKeys(String.valueOf(number));
-
         assertEquals(enterNumber.getAttribute("value"), String.valueOf(number));
-//         TODO:
-//        enter a number under "Number"
+
 //        check that button is not clickable "Clear Result"
+        assertTrue(resultButton.isEnabled());
+        assertFalse(clearButton.isEnabled());
+
+//        check that text is not displayed
+        assertFalse(resultText.isDisplayed());
+
 //        click on "Result" button
+        resultButton.click();
+
 //        check that text is displayed
+        assertTrue(resultText.isDisplayed());
+
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
+        assertEquals(stringNumber2, resultText.getText());
+
 //        check that the button "Clear Result" is clickable now
+        assertTrue(clearButton.isEnabled());
+
 //        click on "Clear Result"
-//        check that the text is still ("You entered number: "NUMBER YOU ENTERED""), but it is not displayed
+        clearButton.click();
+
+//        check that the text is still (""), but it is not displayed
+        assertFalse(resultText.isDisplayed());
+        assertEquals("", resultText.getText());
+        assertEquals(stringNumber2, resultText.getAttribute("textContent"));
     }
 
     @Test
@@ -102,7 +120,7 @@ public class Sample4Task {
         assertFalse(resultText.isDisplayed());
         assertEquals("", resultText.getText());
         assertEquals(stringNumber2 + "\"" + stringNumber1 + '"', resultText.getAttribute("textContent"));
-    };
+    }
 
     @Test
     public void clickOnLink() throws Exception {
