@@ -35,7 +35,7 @@ public class Sample2 {
     @Test
      public void findElementByID() throws Exception {
         // works:
-        System.out.println(driver.findElement(By.id("heading_1")).getText());
+        System.out.println(driver.findElement(By.id("heading_1asdiousa")).getText());
         // will fail with error NoSuchElementException
         // no such element:
         // Unable to locate element: {"method":"id","selector":"headingasdga"}
@@ -51,7 +51,7 @@ public class Sample2 {
         System.out.println(driver.findElement(By.name("randomButton1")).getAttribute("name")); // "randomButton"
         System.out.println(driver.findElement(By.name("randomButton1")).getAttribute("id")); // empty
         // Unable to locate element: {"method":"name","selector":"randomButton123"}:
-//        System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
+        System.out.println(driver.findElement(By.name("randomButton123")).getAttribute("value"));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class Sample2 {
         System.out.println(driver.findElements(By.id("headingasdga")).size()); // 0
         System.out.println(driver.findElements(By.className("text")).size()); // 5
         List <WebElement> allElementsWithClass = driver.findElements(By.className("text"));
-
+//
         for (WebElement elementWithClass : allElementsWithClass) {
             System.out.println(elementWithClass.getText());
     //            sample text 1
@@ -73,6 +73,8 @@ public class Sample2 {
     //            amazing sample text
     //            dummy text
         }
+        System.out.println("-----------------------");
+        System.out.println(driver.findElements(By.className("text")).get(0).getText());
         System.out.println(driver.findElements(By.className("text")).get(2).getText()); // "unbelievable sample text"
     }
 }
