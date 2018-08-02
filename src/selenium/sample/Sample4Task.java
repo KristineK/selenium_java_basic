@@ -101,6 +101,7 @@ public class Sample4Task {
 //        check that the text is still (""), but it is not displayed
         assertFalse(resultText.isDisplayed());
         assertEquals("", resultText.getText());
+        assertEquals(stringNumber2 + "\"" + stringNumber1 + '"', resultText.getAttribute("textContent"));
     };
 
     @Test
