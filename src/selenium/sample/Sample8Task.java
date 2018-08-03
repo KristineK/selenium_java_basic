@@ -37,6 +37,9 @@ public class Sample8Task {
         assertEquals("rgba(255, 221, 221, 1)",
                 driver.findElement(By.xpath("//*[@class='w3-container w3-pale-red']"))
                         .getCssValue("background-color"));
+        assertEquals("rgba(255, 255, 204, 1)",
+                driver.findElement(By.xpath("//*[@class='w3-container w3-pale-yellow']"))
+                        .getCssValue("background-color"));
 //         TODO:
 //        check the background of top 2 sections
 //        check h1 element font-size 64px
