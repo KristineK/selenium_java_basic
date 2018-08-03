@@ -50,7 +50,7 @@ public class Sample7 {
             assertFalse(checkBox.isSelected()); // checkboxes are NOT selected
         }
 
-        WebElement option3 = driver.findElement(By.cssSelector(".w3-check[value='Option 3'][type='checkbox'"));
+        WebElement option3 = driver.findElement(By.cssSelector(".w3-check[value='Option 3'][type='checkbox']"));
         assertFalse(option3.isSelected());
         option3.click();
         assertTrue(option3.isSelected());
