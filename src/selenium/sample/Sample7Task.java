@@ -96,7 +96,11 @@ public class Sample7Task {
             }
         }
 //        click result
+        driver.findElement(By.id("result_button_ratio")).click();
 //        check that 'You selected option: Option 1' text is being displayed
+        WebElement text = driver.findElement(By.id("result_radio"));
+        assertTrue(text.isDisplayed());
+        assertEquals("You selected option: Option 1", text.getText());
     }
 
     @Test
