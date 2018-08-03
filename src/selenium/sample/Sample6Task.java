@@ -79,31 +79,35 @@ public class Sample6Task {
 
     @Test
     public void findElementByCssName() throws Exception {
-//        System.out.println("1-2 ways to find text: \"Heading 2 text\"");
-//        System.out.println(driver.findElement().getText());
-//        System.out.println("-----------------------------------------");
+        System.out.println("1-2 ways to find text: \"Heading 2 text\"");
+        System.out.println(driver.findElement(By.cssSelector("#heading_2")).getText());
+        System.out.println(driver.findElement(By.cssSelector("h2#heading_2")).getText());
+        System.out.println("-----------------------------------------");
 
 
 
 
-//        System.out.println("1-2 ways to find text: \"Test Text 1\"");
-//        System.out.println(driver.findElement(By.cssSelector()).getText());
-//        System.out.println("-----------------------------------------");
-//        System.out.println("1-2 ways to find text: \"Test Text 2\"");
-//        System.out.println(driver.findElement(By.cssSelector()).getText());
-//        System.out.println("-----------------------------------------");
-//        System.out.println("1-2 ways to find text: \"Test Text 3\"");
-//        System.out.println(driver.findElement(By.cssSelector()).getText());
-//        System.out.println("-----------------------------------------");
-//        System.out.println("1-2 ways to find text: \"This is also a button\"");
-//        System.out.println(driver.findElement(By.cssSelector()).getAttribute("value"));
-//        System.out.println("-----------------------------------------");
-//         TODO:
-//         1-2 ways to write css to
-//        "Heading 2 text":
-//        "Test Text 1"
-//        "Test Text 2"
-//        "Test Text 3"
-//        "This is also a button"
+        System.out.println("1-2 ways to find text: \"Test Text 1\"");
+        System.out.println(driver.findElement(By.cssSelector(".test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("p.test")).getText());
+        System.out.println("-----------------------------------------");
+        System.out.println("1-2 ways to find text: \"Test Text 2\"");
+        System.out.println(driver.findElement(By.cssSelector(".twoTest")).getText());
+        System.out.println(driver.findElement(By.cssSelector("p.twoTest")).getText());
+        System.out.println("-----------------------------------------");
+        System.out.println("1-2 ways to find text: \"Test Text 3\"");
+        System.out.println(driver.findElement(By.cssSelector("#test3 p:nth-child(1)")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 p:nth-of-type(1)")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 p")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 .test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 > .test")).getText());
+        System.out.println(driver.findElement(By.cssSelector("#test3 p.test")).getText());
+        System.out.println("-----------------------------------------");
+
+        System.out.println("1-2 ways to find text: \"This is also a button\"");
+        System.out.println(driver.findElement(By.cssSelector("#buttonId")).getAttribute("value"));
+        System.out.println(driver.findElement(By.cssSelector("[name='randomButton2']")).getAttribute("value"));
+        System.out.println(driver.findElement(By.cssSelector("[type='button']:nth-of-type(2)")).getAttribute("value"));
+        System.out.println("-----------------------------------------");
     }
 }
