@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -74,6 +76,19 @@ public class Sample9Task {
 
     @Test
     public void loadGreenExplicitWait() throws Exception {
+        WebDriverWait myNewWait = new WebDriverWait(driver, 10);
+        driver.findElement(By.id("start_green")).click();
+        assertFalse(driver.findElement(By.id("start_green")).isDisplayed());
+        assertEquals(driver.findElement(By.id("loading_green")).getText(), "Loading green...");
+
+        //myNewWait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.id("loading_green"))));
+//        OR
+//        myNewWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("finish_green"))));
+//        OR
+        myNewWait.until(ExpectedConditions.presenceOfElementLocated(By.id("finish_green")));
+        assertFalse(driver.findElement(By.id("start_green")).isDisplayed());
+        assertFalse(driver.findElement(By.id("loading_green")).isDisplayed());
+        assertEquals(driver.findElement(By.id("finish_green")).getText(), "Green Loaded");
         /* TODO:
          * 1) click on start loading green button
          * 2) check that button does not appear,
