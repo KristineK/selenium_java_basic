@@ -59,6 +59,7 @@ Note: replace branch_name with your name and surname (NO SPACES)
     * [Sample8Task.java](../master/src/selenium/sample/Sample8Task.java)
 * Waits:
     * [Sample9.java](../master/src/selenium/sample/Sample9.java)
+    * [Sample9Task.java](../master/src/selenium/sample/Sample9Task.java)
 * Into to Page Object:    
     * [Sample10.java](../master/src/selenium/sample/Sample10.java)
     * [GenericPageSample.java](../master/src/pages/GenericPageSample.java)
@@ -81,8 +82,6 @@ Note: replace branch_name with your name and surname (NO SPACES)
 * Using different browsers:
     * [extra2.java](../master/src/selenium/sample/extra2.java)
     * [extra2Task.java](../master/src/selenium/sample/extra2Task.java)
-* Wait:
-    * [Task2.java](../master/src/selenium/tasks/Task2.java) -> `loadGreenAndBlueBonus()`
  * Calendar picker:   
     * [Sample7Task.java](../master/src/selenium/sample/Sample7Task.java) -> `chooseDateViaCalendarBonus()` and `chooseDateViaTextBoxBonus()`
  * Page Object + Page Factory:

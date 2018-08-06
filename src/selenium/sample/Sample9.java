@@ -53,7 +53,6 @@ public class Sample9 {
 
     @Test
     public void implicitWaitExample() throws Exception {
-
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id='magic_text']/*[text()=\"What is this magic? It's dev magic~\"]"));
 //        driver.findElement(By.id("asd"));
@@ -64,6 +63,7 @@ public class Sample9 {
     public void explicitWaitExample1() throws Exception {
 //        check that the element is present on page
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='magic_text']/*[text()=\"What is this magic? It's dev magic~\"]")));
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("asd")));
         driver.findElement(By.xpath("//*[@id='magic_text']/*[text()=\"What is this magic? It's dev magic~\"]"));
         magicTextCheck();
     }

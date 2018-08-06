@@ -1,20 +1,12 @@
-package selenium.tasks;
+package selenium.sample;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-public class Task2 {
+public class Sample9Task {
     WebDriver driver;
 
     @Before
@@ -31,7 +23,8 @@ public class Task2 {
     }
 
     @Test
-    public void loadGreenSleep() throws Exception{
+    public void loadGreenSleep() throws Exception {
+        
         /* TODO:
          * 1) click on start loading green button
          * 2) check that button does not appear,
@@ -43,7 +36,7 @@ public class Task2 {
     }
 
     @Test
-    public void loadGreenImplicit() {
+    public void loadGreenImplicit() throws Exception {
         /* TODO:
          * 1) click on start loading green button
          * 2) check that button does not appear,
@@ -55,7 +48,7 @@ public class Task2 {
     }
 
     @Test
-    public void loadGreenExplicitWait() {
+    public void loadGreenExplicitWait() throws Exception {
         /* TODO:
          * 1) click on start loading green button
          * 2) check that button does not appear,
