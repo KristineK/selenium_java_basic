@@ -3,8 +3,12 @@ package selenium.sample;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class Sample9Task {
     WebDriver driver;
@@ -24,7 +28,14 @@ public class Sample9Task {
 
     @Test
     public void loadGreenSleep() throws Exception {
-        
+        driver.findElement(By.id("start_green")).click();
+        assertFalse(driver.findElement(By.id("start_green")).isDisplayed());
+        assertEquals(driver.findElement(By.id("loading_green")).getText(), "Loading green...");
+        Thread.sleep(5000);
+        assertFalse(driver.findElement(By.id("start_green")).isDisplayed());
+        assertFalse(driver.findElement(By.id("loading_green")).isDisplayed());
+        assertEquals(driver.findElement(By.id("finish_green")).getText(), "Green Loaded");
+
         /* TODO:
          * 1) click on start loading green button
          * 2) check that button does not appear,
