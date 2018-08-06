@@ -9,9 +9,9 @@ import org.openqa.selenium.support.How;
 
 
 public class MainPageSample extends GenericPageSample {
-    @FindBy(how = How.CSS, using = ".w3-container a.header_link")
+    @FindBy(how = How.ID, using = ".w3-container a.header_link")
     private List<WebElement> headerLinks;
-    @FindBy(how = How.CSS, using = ".w3-container > h2")
+    @FindBy(how = How.XPATH, using = ".w3-container > h2")
     private List<WebElement> headers;
     @FindBy(how = How.CSS, using = ".w3-container > .description")
     private List<WebElement> descriptions;

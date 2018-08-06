@@ -73,6 +73,8 @@ Note: replace branch_name with your name and surname (NO SPACES)
     * [Task3.java](../master/src/selenium/tasks/Task3.java)
 
 #### Test on locators
+[Test](https://docs.google.com/forms/d/e/1FAIpQLSfVURa4wYHQrKUzXNwg5JeduAfpBuGQkpmMuHIF6Wfd9ivWEQ/viewform?usp=sf_link)
+
 
 ---
 ### Bonuses in case of boredom
