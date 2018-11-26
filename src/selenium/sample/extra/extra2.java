@@ -16,7 +16,7 @@ public class extra2 {
     String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
 
     public void pageCheck() throws Exception {
-        driver.get("https://kristinek.github.io/site/examples/st");
+        driver.get("https://kristinek.github.io/site/examples/styles");
 //        WebElement h1 = driver.findElement(By.xpath("//h1"));
 //        assertEquals("block", h1.getCssValue("display"));
 //        assertEquals("rgba(0, 0, 0, 1)", h1.getCssValue("color"));

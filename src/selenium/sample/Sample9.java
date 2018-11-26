@@ -76,7 +76,7 @@ public class Sample9 {
 
     @Test
     public void explicitWaitExample3() throws Exception {
-        driver.get("https://kristinek.github.io/site/examples/al_p");
+        driver.get("https://kristinek.github.io/site/examples/alerted_page");
         wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().accept();
     }
