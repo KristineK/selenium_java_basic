@@ -39,6 +39,7 @@ Note: replace branch_name with your name and surname (NO SPACES)
 * Locators (id, class, name):
     * [Sample2.java](../master/src/selenium/sample/Sample2.java)
     * [Sample2Task.java](../master/src/selenium/sample/Sample2Task.java)
+### Still to come:
 * Asserts:
     * [Sample3.java](../master/src/selenium/sample/Sample3.java)
     * [Sample3Task.java](../master/src/selenium/sample/Sample3Task.java)
