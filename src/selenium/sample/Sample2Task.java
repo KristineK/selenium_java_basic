@@ -67,6 +67,7 @@ public class Sample2Task {
         for (WebElement elem : allElementWithClass) {
             System.out.println(elem.getText());
         }
+//        sdfs
         System.out.println(allElementWithClass.get(2).getText());
 
 //         TODO:
