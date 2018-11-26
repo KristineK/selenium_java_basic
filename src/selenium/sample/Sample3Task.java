@@ -5,7 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -69,5 +72,10 @@ public class Sample3Task {
 //        TODO:
 //        check that none of items with class "test"
 //        contain number 190
+        List<WebElement> elements = driver.findElements(By.className("test"));
+        for (WebElement elem : elements) {
+            assertTrue(!elem.getText().contains("190"));
+//            assertTrue("Expecting " + elem.getText() + " to not have 4", !elem.getText().contains("4"));
+        }
     }
 }
