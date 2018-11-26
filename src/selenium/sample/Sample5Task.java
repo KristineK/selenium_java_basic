@@ -18,7 +18,7 @@ public class Sample5Task {
         // declaration above:
         driver = new ChromeDriver();
         //open page:
-        driver.get("https://kristinek.github.io/site/examples/al_and_pu");
+        driver.get("https://kristinek.github.io/site/examples/alerts_popups");
     }
 
     // method which is being run after each test

@@ -14,7 +14,7 @@ public class Sample9Task {
         String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://kristinek.github.io/site/tasks/task2");
+        driver.get("https://kristinek.github.io/site/examples/loading_color");
     }
 
     @After

@@ -23,7 +23,7 @@ public class Sample8 {
         driver = new ChromeDriver();
 
         //open page:
-        driver.get("https://kristinek.github.io/site/examples/st");
+        driver.get("https://kristinek.github.io/site/examples/styles");
     }
 
     // method which is being run after each test

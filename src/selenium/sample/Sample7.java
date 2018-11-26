@@ -4,20 +4,24 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.*;
+import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
 public class Sample7 {
     WebDriver driver;
-    String base_url = "https://kristinek.github.io/site/examples/act";
+    String base_url = "https://kristinek.github.io/site/examples/actions";
 
     // method which is being run before each test
     @Before
@@ -95,6 +99,13 @@ public class Sample7 {
         assertEquals("Choose your option", dropdown.getFirstSelectedOption().getText());
         dropdown.selectByValue("value3");
         assertEquals("Option 3", dropdown.getFirstSelectedOption().getText());
+    }
+
+    @Test
+    public void testDragAndDrop() throws Exception {
+        String dragElement = "#black_box";
+        String toTarget = "#drag_box2";
+        Sample7DragAndDropMagic.dragAndDropMagic(driver, dragElement, toTarget);
     }
 
     @Test

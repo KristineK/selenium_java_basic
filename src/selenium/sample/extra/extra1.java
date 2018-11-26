@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class extra1 {
     WebDriver driver;
-    String base_url = "https://kristinek.github.io/site/examples/act";
+    String base_url = "https://kristinek.github.io/site/examples/actions";
     String new_url = "https://kristinek.github.io/site/examples/link1";
 
     // method which is being run before each test

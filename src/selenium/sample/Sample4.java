@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class Sample4 {
     WebDriver driver;
-    String base_url = "https://kristinek.github.io/site/examples/act";
+    String base_url = "https://kristinek.github.io/site/examples/actions";
 
     // method which is being run before each test
     @Before
