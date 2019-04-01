@@ -30,7 +30,7 @@ public class Sample5 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -84,7 +84,7 @@ public class Sample5 {
         Alert alert = driver.switchTo().alert();
         assertEquals("Please enter a number", alert.getText());
 
-        alert.sendKeys("75");
+        alert.sendKeys(enterKeys);
         alert.accept();
         assertTrue(driver.findElement(By.id("textForAlerts")).getText().contains("instead of " + enterKeys));
     }

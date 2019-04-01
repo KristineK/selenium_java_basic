@@ -29,6 +29,6 @@ public class Sample1 {
         Thread.sleep(10000);
 
         //Close browser
-        driver.close();
+        driver.quit();
     }
 }

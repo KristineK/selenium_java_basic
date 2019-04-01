@@ -30,7 +30,7 @@ public class Sample4 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -86,7 +86,7 @@ public class Sample4 {
         assertEquals(textArea.getText(), originalTextInTextArea); // checking that getText is "This is a text area"
         assertEquals(textArea.getAttribute("value"), ""); // checking that value is empty or ""
 
-        textArea.sendKeys("ddfgjfdjhgdfj khgfgl");
+        textArea.sendKeys(newTextTwo);
 
         assertEquals(textArea.getText(), originalTextInTextArea); // checking that getText is "This is a text area"
         assertEquals(textArea.getAttribute("value"), newTextTwo); // checking that value is "New text in text area"

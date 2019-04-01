@@ -20,7 +20,7 @@ public class Task1 {
 
     @After
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
     @Test

@@ -26,7 +26,7 @@ public class Sample6 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     @Test

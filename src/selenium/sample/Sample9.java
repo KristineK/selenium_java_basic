@@ -94,7 +94,7 @@ public class Sample9 {
 
     @Test
     public void explicitWaitExample5() throws Exception {
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//p"), "asfafdsdfs"));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//p"), "dev"));
         magicTextCheck();
     }
 }

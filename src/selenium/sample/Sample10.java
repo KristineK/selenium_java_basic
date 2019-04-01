@@ -29,7 +29,7 @@ public class Sample10 {
 
     @After
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
     @Test

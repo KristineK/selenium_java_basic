@@ -27,7 +27,7 @@ public class Sample9Task {
 
     @After
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
     @Test

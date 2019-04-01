@@ -14,7 +14,7 @@ public class extra2Task {
 
     @After
     public void endingTests() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     @Test

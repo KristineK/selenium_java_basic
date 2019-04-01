@@ -31,7 +31,7 @@ public class extra1 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     //    1. navigateBack (which will check current url,
