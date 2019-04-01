@@ -1,9 +1,9 @@
 ### Setup 
-[wiki](wiki/Setup)
+[see wiki](https://github.com/KristineK/selenium_java_basic/wiki/Setup)
 
 ---
 ### How to add, commit and push changes to 
-[wiki](wiki/Git-add-commit-pust)
+[see wiki](https://github.com/KristineK/selenium_java_basic/wiki/Git-add-commit-pust)
    
 ---
 ### Samples and SampleTask so far...
