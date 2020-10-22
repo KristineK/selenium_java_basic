@@ -15,7 +15,7 @@ public class Task1 {
         String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://kristinek.github.io/sitetasks/enter_a_number");
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
     }
 
     @After

@@ -23,16 +23,19 @@ public class Sample3 {
 
         //open page:
         driver.get("https://kristinek.github.io/site/examples/locators");
+        System.out.println("---------START--------------");
     }
 
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
+        System.out.println("---------FINISH--------------");
         driver.quit();
     }
 
     @Test
     public void assertEqualsExampleString() throws Exception {
+        System.out.println("---------1---------");
         String expected = "Heading 1";
         String actual = driver.findElement(By.id("heading_1")).getText();
         assertEquals(expected, actual);
@@ -40,7 +43,8 @@ public class Sample3 {
 
     @Test
     public void assertEqualsFailingExampleString() throws Exception {
-        String expected = "Not base page";
+        System.out.println("---------2---------");
+        String expected = "Heading 1";
         String actual = driver.findElement(By.id("heading_1")).getText();
 
         // fails:
