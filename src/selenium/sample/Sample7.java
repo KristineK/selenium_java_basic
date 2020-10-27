@@ -45,15 +45,16 @@ public class Sample7 {
         for (WebElement checkBox : checkBoxes) {
             assertFalse(checkBox.isSelected()); // checkboxes are NOT selected
             checkBox.click();
-            assertTrue(checkBox.isSelected()); // checkboxes are selected
-            checkBox.click();
-            assertFalse(checkBox.isSelected()); // checkboxes are NOT selected
+            //assertTrue(checkBox.isSelected()); // checkboxes are selected
+            //checkBox.click();
+            //assertFalse(checkBox.isSelected()); // checkboxes are NOT selected
         }
 
         WebElement option3 = driver.findElement(By.cssSelector(".w3-check[value='Option 3'][type='checkbox']"));
         assertFalse(option3.isSelected());
         option3.click();
         assertTrue(option3.isSelected());
+        Thread.sleep(10000);
     }
 
 
@@ -77,8 +78,9 @@ public class Sample7 {
     public void selectOptionByText() throws Exception {
         Select dropdown = new Select(driver.findElement(By.id("vfb-12")));
         assertEquals("Choose your option", dropdown.getFirstSelectedOption().getText());
-        dropdown.selectByVisibleText("Option 2");
-        assertEquals("Option 2", dropdown.getFirstSelectedOption().getText());
+        dropdown.selectByVisibleText("Option 1");
+        assertEquals("Option 1", dropdown.getFirstSelectedOption().getText());
+        Thread.sleep(10000);
     }
 
     @Test
@@ -109,23 +111,27 @@ public class Sample7 {
 //    get today date
         Calendar cal = Calendar.getInstance();
 //    go back 10 month
-        cal.add(Calendar.MONTH, -10);
-        String result = new SimpleDateFormat("MM/15/yyyy").format(cal.getTime());
-
+        //cal.add(Calendar.MONTH, -10);
+        cal.add(Calendar.MONTH, -3);
+        cal.add(Calendar.YEAR, -13);
+        String result = new SimpleDateFormat("MM/04/yyyy").format(cal.getTime());
+        System.out.println(result);
         WebElement dateBox = driver.findElement(By.id("vfb-8"));
-        assertEquals("", dateBox.getAttribute("value"));
-
+        //assertEquals("", dateBox.getAttribute("value"));
+        Thread.sleep(5000);
         dateBox.click();
         WebElement dateWidget = driver.findElement(By.id("ui-datepicker-div"));
 //    go back 10 month in calendar on page
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 159; i++) {
             dateWidget.findElement(By.className("ui-datepicker-prev")).click();
         }
 //    select date 15
-        dateWidget.findElement(By.xpath("//a[text()='15']")).click();
+        Thread.sleep(5000);
+        dateWidget.findElement(By.xpath("//a[text()='4']")).click();
 
-        assertEquals(result, dateBox.getAttribute("value"));
+        //assertEquals(result, dateBox.getAttribute("value"));
         dateBox.clear();
+        Thread.sleep(5000);
     }
 
     @Test
@@ -134,9 +140,10 @@ public class Sample7 {
 
         WebElement dateBox = driver.findElement(By.id("vfb-8"));
         assertEquals("", dateBox.getAttribute("value"));
-
+        Thread.sleep(5000);
         dateBox.clear();
         dateBox.sendKeys(dateToEnter);
         assertEquals(dateToEnter, dateBox.getAttribute("value"));
+        Thread.sleep(5000);
     }
 }

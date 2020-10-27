@@ -15,6 +15,7 @@ public class extra1 {
     String base_url = "https://kristinek.github.io/site/examples/actions";
     String new_url = "https://kristinek.github.io/site/examples/link1";
 
+
     // method which is being run before each test
     @Before
     public void startingTests() throws Exception {
@@ -44,6 +45,7 @@ public class extra1 {
         assertEquals(new_url, driver.getCurrentUrl());
         driver.navigate().back();
         assertEquals(base_url, driver.getCurrentUrl());
+        Thread.sleep(5000);
     }
 
     //2. navigateForward (which will check current url,

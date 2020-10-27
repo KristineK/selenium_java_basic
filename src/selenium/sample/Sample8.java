@@ -35,6 +35,8 @@ public class Sample8 {
     @Test
     public void styleChecks() throws Exception {
         WebElement h1 = driver.findElement(By.xpath("//h1"));
+        System.out.println(h1);
+        Thread.sleep(5000);
         assertEquals("block", h1.getCssValue("display"));
         assertEquals("rgba(0, 0, 0, 1)", h1.getCssValue("color"));
         assertEquals("64px", h1.getCssValue("font-size"));
@@ -42,5 +44,6 @@ public class Sample8 {
 
         WebElement div_h1 = driver.findElement(By.xpath("//div[h1]"));
         assertEquals("rgba(241, 241, 241, 1)", div_h1.getCssValue("background-color"));
+        Thread.sleep(5000);
     }
 }

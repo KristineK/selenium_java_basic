@@ -80,5 +80,10 @@ public class Sample3Task {
 //        TODO:
 //        check that none of items with class "test"
 //        contain number 190
+
+        List <WebElement> allElements = driver.findElements(By.className("test"));
+        for (WebElement a : allElements){
+            assertFalse(a.getText().contains("190"));
+        }
     }
 }

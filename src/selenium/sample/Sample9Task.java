@@ -34,6 +34,7 @@ public class Sample9Task {
     public void loadGreenSleep() throws Exception {
 //         TODO:
 //         * 1) click on start loading green button
+        driver.findElement(By.id("start_green")).click();
 //         * 2) check that button does not appear,
 //         * but loading text is seen instead   "Loading green..."
 //         * 3) check that both button
@@ -45,6 +46,7 @@ public class Sample9Task {
     public void loadGreenImplicit() throws Exception {
 //         TODO:
 //         * 1) click on start loading green button
+        driver.findElement(By.id("start_green")).click();
 //         * 2) check that button does not appear,
 //         * but loading text is seen instead   "Loading green..."
 //         * 3) check that both button
@@ -56,6 +58,7 @@ public class Sample9Task {
     public void loadGreenExplicitWait() throws Exception {
 //         TODO:
 //         * 1) click on start loading green button
+        driver.findElement(By.id("start_green")).click();
 //         * 2) check that button does not appear,
 //         * but loading text is seen instead   "Loading green..."
 //         * 3) check that both button
@@ -68,12 +71,14 @@ public class Sample9Task {
         /* TODO:
          * 0) wait until button to load green and blue appears
          * 1) click on start loading green and blue button
+         *
          * 2) check that button does not appear, but loading text is seen instead for green
          * 3) check that button does not appear, but loading text is seen instead for green and blue
          * 4) check that button and loading green does not appear,
          * 		but loading text is seen instead for blue and success for green is seen
          * 5) check that both button and loading text is not seen, success is seen instead
          */
+        driver.findElement(By.id("start_green")).click();
     }
 
 }
