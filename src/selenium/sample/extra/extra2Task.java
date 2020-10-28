@@ -2,15 +2,20 @@ package selenium.sample.extra;
 
 import org.junit.After;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class extra2Task {
     WebDriver driver;
     String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
+    String po_url = "https://kristinek.github.io/site/examples/po";
 
     @After
     public void endingTests() throws Exception {
@@ -23,7 +28,14 @@ public class extra2Task {
         driver = new FirefoxDriver();
 //        TODO
 //        go to page https://kristinek.github.io/site/examples/po
+        driver.get(po_url);
 //        check the background color of h1 element
+        WebElement h1 = driver.findElement(By.xpath("//h1"));
+        System.out.println(h1.getCssValue("background-color"));
+        assertEquals("rgba(0, 0, 0, 0)", h1.getCssValue("background-color"));
+        Thread.sleep(5000);
+
+
     }
 
     @Test
@@ -32,7 +44,12 @@ public class extra2Task {
         driver = new ChromeDriver();
 //        TODO
 //        go to page https://kristinek.github.io/site/examples/po
+        driver.get(po_url);
 //        check the background color of h1 element
+        WebElement h1 = driver.findElement(By.xpath("//h1"));
+        System.out.println(h1.getCssValue("background-color"));
+        assertEquals("rgba(0, 0, 0, 0)", h1.getCssValue("background-color"));
+        Thread.sleep(5000);
     }
 
     @Test
@@ -41,6 +58,11 @@ public class extra2Task {
         driver = new InternetExplorerDriver();
 //        TODO
 //        go to page https://kristinek.github.io/site/examples/po
+        driver.get(po_url);
 //        check the background color of h1 element
+        WebElement h1 = driver.findElement(By.xpath("//h1"));
+        System.out.println(h1.getCssValue("background-color"));
+        assertEquals("rgba(0, 0, 0, 0)", h1.getCssValue("background-color"));
+        Thread.sleep(5000);
     }
 }
