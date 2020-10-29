@@ -7,12 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Sample1 {
-    static String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
+    static String libWithDriversLocation = System.getProperty("user.dir") + "/lib/";
 
     @Test
     public void goToHomepage() throws Exception {
         //define driver
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver");
         WebDriver driver = new ChromeDriver();
 
         //open test homepage

@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.text.BreakIterator;
+
 import static org.junit.Assert.assertEquals;
 
 public class Sample5Task {
@@ -17,8 +19,8 @@ public class Sample5Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + "/lib/";
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver");
         // declaration above:
         driver = new ChromeDriver();
         //open page:
@@ -41,6 +43,14 @@ public class Sample5Task {
 //        verify alert text
 //        click ok on second alert
 //        verify that the correct page is opened
+        driver.findElement(By.className("w3-blue")).click();
+        driver.switchTo().alert().accept();
+        Alert alert = driver.switchTo().alert() ;
+        assertEquals("Booooooooo!", alert.getText());
+        driver.switchTo().alert().accept();
+        assertEquals(driver.getCurrentUrl(),"https://kristinek.github.io/site/examples/alerted_page" );
+
+
     }
 
     @Test
@@ -50,5 +60,7 @@ public class Sample5Task {
 //        switch to alert
 //        click cancel
 //        verify the text on page
-    }
+        driver.findElement(By.className("w3-blue")).click();
+        driver.switchTo().alert().dismiss();
+        assertEquals("So you desided to say? Good!", driver.findElement(By.id("textForAlerts")).getText());    }
 }

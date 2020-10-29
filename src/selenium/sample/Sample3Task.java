@@ -19,8 +19,8 @@ public class Sample3Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + "/lib/";
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver");
         // declaration above:
         driver = new ChromeDriver();
 
@@ -39,6 +39,10 @@ public class Sample3Task {
 //         TODO:
 //         check how many element with class "test" there are on page (5)
 //         check that value of second button is "This is also a button"
+        int expectedNumberOfElements = 5;
+        int actualNumberOfElements = driver.findElements(By.className("test")).size();
+        assertEquals(expectedNumberOfElements, actualNumberOfElements);
+     //   string expectedValueOfButton =
     }
 
     @Test
@@ -47,12 +51,16 @@ public class Sample3Task {
 //         check that it is True that value of second button is
 //         "this is Also a Button" if you ignore Caps Locks
 //         fail with custom error message:
+       // String secondButton = driver.findElement(By.name("randomButton2")).getAttribute("value").equalsIgnoreCase(("this is Also a Button"));
+        assertTrue(driver.findElement(By.name("randomButton2")).getAttribute("value").equalsIgnoreCase("this is Also a Button"));
     }
 
     @Test
     public void assertFalseTask() throws Exception {
 //         TODO:
 //        check that it is False that value of second button is "This is a button"
+        String secondButton = driver.findElement(By.name("randomButton2")).getAttribute("value");
+        assertFalse(secondButton.equals("This is a button"));
     }
 
     @Test
@@ -60,5 +68,7 @@ public class Sample3Task {
 //        TODO:
 //        check that none of items with class "test"
 //        contain number 190
+        List<WebElement> allElementsWithClass = driver.findElements(By.className("test"));
+        assertFalse(allElementsWithClass.contains("190"));
     }
 }

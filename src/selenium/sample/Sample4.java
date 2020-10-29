@@ -18,8 +18,8 @@ public class Sample4 {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + "/lib/";
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver");
         // declaration above:
         driver = new ChromeDriver();
 
@@ -30,6 +30,7 @@ public class Sample4 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
+        Thread.sleep(10000);
         driver.quit();
     }
 

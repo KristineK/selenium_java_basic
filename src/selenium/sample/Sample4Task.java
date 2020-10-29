@@ -18,8 +18,8 @@ public class Sample4Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + "/lib/";
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver");
         // declaration above:
         driver = new ChromeDriver();
         //open page:
@@ -29,6 +29,7 @@ public class Sample4Task {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
+        //Thread.sleep(10000);
         driver.quit();
     }
 
@@ -44,6 +45,20 @@ public class Sample4Task {
 //        check that the button "Clear Result" is clickable now
 //        click on "Clear Result"
 //        check that the text is still (""), but it is not displayed
+        WebElement number = driver.findElement(By.id("number"));
+        String originalinputinnumber = "5";
+        String newnumber = "51";
+        number.sendKeys(String.valueOf(newnumber));
+        WebElement clearresultbutton = driver.findElement(By.id("clear_result_button_number"));
+        assertFalse(clearresultbutton.isEnabled());
+        WebElement resultnumber = driver.findElement(By.id("result_number"));
+        assertFalse(resultnumber.isDisplayed());
+        driver.findElement(By.id("result_button_number")).click();
+        assertTrue(resultnumber.isDisplayed());
+        assertEquals(number.getAttribute("value"), newnumber + originalinputinnumber);
+        assertTrue(clearresultbutton.isEnabled());
+        driver.findElement(By.id("clear_result_button_number")).click();
+        assertFalse(resultnumber.isDisplayed());
     }
 
     @Test
@@ -53,5 +68,10 @@ public class Sample4Task {
 //        click on "This is a link to Homepage"
 //        check that current url is not base_url
 //        verify that current url is homepage
+        driver.getCurrentUrl();
+        driver.findElement(By.id("homepage_link")).click();
+        assertFalse(driver.getCurrentUrl().equals(base_url));
+        assertEquals(driver.getCurrentUrl(),"https://kristinek.github.io/site/" );
+
     }
 }
