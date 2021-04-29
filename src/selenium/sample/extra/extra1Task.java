@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+
 public class extra1Task {
     WebDriver driver;
     String base_url = "https://kristinek.github.io/site/examples/act";
@@ -15,8 +17,8 @@ public class extra1Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         // declaration above:
         driver = new ChromeDriver();
 
@@ -27,7 +29,7 @@ public class extra1Task {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.quit();
+        driver.close();
     }
 
     @Test

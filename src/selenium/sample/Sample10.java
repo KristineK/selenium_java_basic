@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import selenium.pages.AgeSamplePage;
 import selenium.pages.AgeSubmittedSamplePage;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class Sample10 {
@@ -18,8 +19,8 @@ public class Sample10 {
 
     @Before
     public void openPage() throws InterruptedException {
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://kristinek.github.io/site/examples/age");
@@ -29,7 +30,7 @@ public class Sample10 {
 
     @After
     public void closeBrowser() {
-        driver.quit();
+        driver.close();
     }
 
     @Test

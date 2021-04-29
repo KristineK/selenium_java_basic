@@ -6,21 +6,23 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+
 public class Task1 {
     WebDriver driver;
 
     @Before
     public void openPage() {
 
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
         driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
     }
 
     @After
     public void closeBrowser() {
-        driver.quit();
+        driver.close();
     }
 
     @Test

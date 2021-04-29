@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -19,8 +20,8 @@ public class Sample3Task {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         // declaration above:
         driver = new ChromeDriver();
 
@@ -34,27 +35,18 @@ public class Sample3Task {
         driver.quit();
     }
 
-    @Test ////FAILED!
+    @Test
     public void assertEqualsTask() throws Exception {
-        System.out.println("---------1---------");
 //         TODO:
 //         check how many element with class "test" there are on page (5)
-        System.out.println(driver.findElements(By.className("test")).size());
-
 //         check that value of second button is "This is also a button"
-        String expected = "This is also a button";
-        String actual = driver.findElement(By.name("randomButton2")).getText();
-
-        assertEquals(expected, actual);
     }
 
-    @Test //ADD a custom message
+    @Test
     public void assertTrueTask() throws Exception {
 //         TODO:
 //         check that it is True that value of second button is
 //         "this is Also a Button" if you ignore Caps Locks
-        String elementTextOnPage = driver.findElement(By.xpath("/html/body/input[1]")).getText();
-        assertTrue(elementTextOnPage.equalsIgnoreCase("this is Also a Button"));
 //         fail with custom error message:
     }
 
@@ -62,13 +54,6 @@ public class Sample3Task {
     public void assertFalseTask() throws Exception {
 //         TODO:
 //        check that it is False that value of second button is "This is a button"
-        String elementTextOnPage = driver.findElement(By.xpath("/html/body/input[1]")).getText();
-        assertFalse(elementTextOnPage.equals("This is a button"));
-        // fail:
-//        assertFalse(true);
-        // pass:
-        assertFalse(false);
-
     }
 
     @Test
@@ -76,9 +61,5 @@ public class Sample3Task {
 //        TODO:
 //        check that none of items with class "test"
 //        contain number 190
-        List<WebElement> allElementsWithClass = driver.findElements(By.className("test"));
-        for (WebElement elementWithClass : allElementsWithClass ) {
-            assertFalse(elementWithClass.getText() .contains("190"));
-        }
     }
 }

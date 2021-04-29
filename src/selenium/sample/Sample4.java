@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+
 import static org.junit.Assert.*;
 
 public class Sample4 {
@@ -18,8 +20,8 @@ public class Sample4 {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         // declaration above:
         driver = new ChromeDriver();
 
@@ -30,7 +32,7 @@ public class Sample4 {
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        driver.quit();
+        driver.close();
     }
 
     @Test

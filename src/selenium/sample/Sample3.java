@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+
 import static org.junit.Assert.*;
 
 public class Sample3 {
@@ -16,26 +18,23 @@ public class Sample3 {
     @Before
     public void startingTests() throws Exception {
         // from Sample 1:
-        String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         // declaration above:
         driver = new ChromeDriver();
 
         //open page:
         driver.get("https://kristinek.github.io/site/examples/locators");
-        System.out.println("---------START--------------");
     }
 
     // method which is being run after each test
     @After
     public void endingTests() throws Exception {
-        System.out.println("---------FINISH--------------");
         driver.quit();
     }
 
     @Test
     public void assertEqualsExampleString() throws Exception {
-        System.out.println("---------1---------");
         String expected = "Heading 1";
         String actual = driver.findElement(By.id("heading_1")).getText();
         assertEquals(expected, actual);
@@ -43,8 +42,7 @@ public class Sample3 {
 
     @Test
     public void assertEqualsFailingExampleString() throws Exception {
-        System.out.println("---------2---------");
-        String expected = "Heading 1";
+        String expected = "Not base page";
         String actual = driver.findElement(By.id("heading_1")).getText();
 
         // fails:

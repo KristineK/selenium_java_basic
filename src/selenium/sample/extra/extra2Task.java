@@ -7,14 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import java.io.File;
+
 
 public class extra2Task {
     WebDriver driver;
-    String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
+    String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
 
     @After
     public void endingTests() throws Exception {
-        driver.quit();
+        driver.close();
     }
 
     @Test
@@ -28,7 +30,7 @@ public class extra2Task {
 
     @Test
     public void runningOnChrome() throws Exception {
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
 //        TODO
 //        go to page https://kristinek.github.io/site/examples/po

@@ -10,12 +10,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.Color;
 
+import java.io.File;
+
 import static org.junit.Assert.assertEquals;
 
 
 public class extra2 {
     WebDriver driver;
-    String libWithDriversLocation = System.getProperty("user.dir") + "\\lib\\";
+    String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
 
     public void pageCheck() throws Exception {
         driver.get("https://kristinek.github.io/site/examples/styles");
@@ -29,7 +31,7 @@ public class extra2 {
 
     @After
     public void endingTests() throws Exception {
-        driver.quit();
+        driver.close();
     }
 
     @Test
@@ -41,7 +43,7 @@ public class extra2 {
 
     @Test
     public void runningOnChrome() throws Exception {
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
         pageCheck();
     }
