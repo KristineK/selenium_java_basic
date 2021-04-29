@@ -5,3 +5,4 @@ target/
 output/
 phantomjsdriver.log
 *.jpg
+lib/.DS_Store
