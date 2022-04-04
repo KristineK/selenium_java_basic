@@ -18,5 +18,14 @@ public class Sample1Task {
 //         get title of page
 //         get URL of current page
 //         close browser
+        System.setProperty("webdriver.chrome.driver","/Users/mymac/Documents/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://kristinek.github.io/site/index2.html");
+        System.out.println("Title:" +driver.getTitle());
+        System.out.println("URL" + driver.getCurrentUrl());
+        Thread.sleep(5000);
+        driver.quit();
+
+
     }
 }
