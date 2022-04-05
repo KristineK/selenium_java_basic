@@ -85,7 +85,7 @@ public class Sample7Task {
 //        check that "Option 2" and "Option 3' are not select, but "Option 1" is selected
         assertTrue(opt1.isSelected());
         assertFalse(opt2.isSelected());
-        assertTrue(opt3.isSelected());
+        assertFalse(opt3.isSelected());
 //        click result
         driver.findElement(By.id("result_button_ratio")).click();
 //        check that 'You selected option: Option 1' text is being displayed

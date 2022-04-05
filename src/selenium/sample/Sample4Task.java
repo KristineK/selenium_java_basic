@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
@@ -54,7 +53,7 @@ public class Sample4Task {
         assertFalse(driver.findElement(By.id("result_number")).isDisplayed());
         driver.findElement(By.id("result_button_number")).click();
         assertTrue(driver.findElement(By.id("result_number")).isDisplayed());
-        assertEquals("You Entered number :\"" + numberToEnter +"\"",driver.findElement(By.id("result_number")).getText());
+        assertEquals("You entered number: \"" + numberToEnter +"\"",driver.findElement(By.id("result_number")).getText());
         assertTrue(driver.findElement(By.id("clear_result_button_number")).isEnabled());
         driver.findElement(By.id("clear_result_button_number")).click();
         assertEquals("",driver.findElement(By.id("result_number")).getText());
