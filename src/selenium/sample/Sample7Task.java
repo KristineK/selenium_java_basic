@@ -122,12 +122,22 @@ public class Sample7Task {
 //         TODO:
 //        enter date '4 of July 2007' using calendar widget
 //        check that correct date is added
+        driver.findElement(By.id("vfb-8")).sendKeys("04/07/2007");
+
+        driver.findElement(By.xpath("/html/body/div[5]")).click();
+        driver.findElement(By.id("result_button_date")).click();
+        assertEquals("You entered date: 04/07/2007",driver.findElement(By.id("result_date")).getText());
+
     }
 
     @Test
     public void chooseDateViaTextBoxBonus() throws Exception {
 //         TODO:
 //        enter date '2 of May 1959' using text
+        driver.findElement(By.id("vfb-8")).sendKeys("02/05/1959");
+        driver.findElement(By.xpath("/html/body/div[5]")).click();
+        driver.findElement(By.id("result_button_date")).click();
+        assertEquals("You entered date: 02/05/1959",driver.findElement(By.id("result_date")).getText());
 //        check that correct date is added
     }
 }
