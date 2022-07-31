@@ -26,7 +26,7 @@ public class Task3Bonus {
         String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
-        driver.get("https://kristinek.github.io/sitetasks/list_of_people");
+        driver.get("https://kristinek.github.io/site/tasks/list_of_people_with_jobs");
     }
 
     @After

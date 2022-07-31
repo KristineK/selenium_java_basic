@@ -1,16 +1,11 @@
 ### Setup 
-[see wiki](https://github.com/KristineK/selenium_java_basic/wiki/Setup)
+[see wiki](https://github.com/JanisDzalbe/selenium_java_basic/wiki/Project-Setup)
 
 ---
 ### GIT
-[see wiki for Create-a-branch](https://github.com/KristineK/selenium_java_basic/wiki/Create-a-branch)
+[see wiki for Create-a-branch](https://github.com/JanisDzalbe/selenium_java_basic/wiki/Create-new-branch)
 
-[see wiki for Git-add-commit-pust](https://github.com/KristineK/selenium_java_basic/wiki/Git-add-commit-pust)
-
----
-### Feedback
-
-[Please leave a message, you oppinion is importand to us :)](https://trello.com/invite/b/bel4IMNA/0340db73765032bfae547143b61e58d2/bootcamp)
+[see wiki for Git-add-commit-pust](https://github.com/JanisDzalbe/selenium_java_basic/wiki/Commiting-code-and-pushing-to-remote)
 
 ---
 ### Samples and SampleTask so far...
@@ -41,17 +36,19 @@
 * Waits:
     * [Sample9.java](../master/src/selenium/sample/Sample9.java)
     * [Sample9Task.java](../master/src/selenium/sample/Sample9Task.java)
-* Into to Page Object:    
+* Into to Page Object:
     * [Sample10.java](../master/src/selenium/sample/Sample10.java)
     * [GenericSamplePage.java](../master/src/selenium/pages/GenericSamplePage.java)
     * [AgeSamplePage.java](../master/src/selenium/pages/AgeSamplePage.java)
     * [AgeSubmittedSamplePage.java](../master/src/selenium/pages/AgeSubmittedSamplePage.java)
+    * [Sample10Task.java](../master/src/selenium/sample/Sample10Task.java)
+    * [ColorSamplePage.java](../master/src/selenium/pages/ColorSamplePage.java)
 
  
 ---
 ### Individual Tasks:
- * [Task1](../master/src/selenium/tasks/Task1.java) - please update the url to https://kristinek.github.io/site/tasks/enter_a_number    
- * [Task2](../master/src/selenium/tasks/Task2.java) - please update the url to https://kristinek.github.io/site/tasks/provide_feedback     
+ * [Task1](../master/src/selenium/tasks/Task1.java)
+ * [Task2](../master/src/selenium/tasks/Task2.java)
 ---
 #### Test on locators
 [click here](https://docs.google.com/forms/d/e/1FAIpQLSfVURa4wYHQrKUzXNwg5JeduAfpBuGQkpmMuHIF6Wfd9ivWEQ/viewform?usp=sf_link)
@@ -67,8 +64,8 @@
   * Calendar picker:   
      * [Sample7Task.java](../master/src/selenium/sample/Sample7Task.java) -> `chooseDateViaCalendarBonus()` and `chooseDateViaTextBoxBonus()`
   * Page Object + Page Factory:
-     * [Task3Bonus.java](../master/src/selenium/tasks/Task3Bonus.java) - please update the url to https://kristinek.github.io/site/tasks/list_of_people_with_jobs    
+     * [Task3Bonus.java](../master/src/selenium/tasks/Task3Bonus.java)
 ---
-### Switching to Cucumber project
-[link to cucumber wiki](https://github.com/KristineK/cucumber_java_basic/wiki/Setup)
+### Cucumber project
+[link to cucumber project](https://github.com/JanisDzalbe/cucumber_java_basic)
 

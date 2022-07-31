@@ -45,7 +45,7 @@ public class Sample4Task {
 //        check that the correct Text appears ("You entered number: "NUMBER YOU ENTERED"")
 //        check that the button "Clear Result" is clickable now
 //        click on "Clear Result"
-//        check that the text is still (""), but it is not displayed
+//        check that the text is now (""), but it is not displayed
     }
 
     @Test

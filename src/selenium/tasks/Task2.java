@@ -16,7 +16,7 @@ public class Task2 {
         String libWithDriversLocation = System.getProperty("user.dir") + File.separator + "lib" + File.separator;
         System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
         driver = new ChromeDriver();
-        driver.get("https://kristinek.github.io/sitetasks/provide_feedback");
+        driver.get("https://kristinek.github.io/site/tasks/provide_feedback");
     }
 
     @After
@@ -27,7 +27,7 @@ public class Task2 {
     @Test
     public void initialFeedbackPage() throws Exception {
 //         TODO:
-//         check that all field are empty and no tick are clicked
+//         check that all field are empty and no ticks are clicked
 //         "Don't know" is selected in "Genre"
 //         "Choose your option" in "How do you like us?"
 //         check that the button send is blue with white letters
@@ -37,7 +37,7 @@ public class Task2 {
     public void emptyFeedbackPage() throws Exception {
 //         TODO:
 //         click "Send" without entering any data
-//         check fields are empty or null
+//         check fields are empty or "null"
 //         check button colors
 //         (green with white letter and red with white letters)
     }

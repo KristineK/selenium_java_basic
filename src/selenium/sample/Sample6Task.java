@@ -33,7 +33,7 @@ public class Sample6Task {
     @Test
     public void findElementByXPath() throws Exception {
 //         TODO:
-//        2 ways to find text: "Heading 2 text":
+//        1-2 ways to find text: "Heading 2 text":
 //        1-2 ways to find text: "Test Text 1"
 //        1-2 ways to find text: "Test Text 2"
 //        1-2 ways to find text: "Test Text 3"

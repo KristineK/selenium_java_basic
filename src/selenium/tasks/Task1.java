@@ -33,8 +33,9 @@ public class Task1 {
 
     @Test
     public void errorOnNumberTooSmall() {
+//        BUG: if I enter number 49 or 42 no errors where seen
 //        TODO
-//        enter number which is too small (below 50), check that correct error is seen
+//        enter number which is too small (positive number below 50), check that correct error is seen
     }
 
     @Test
@@ -46,16 +47,10 @@ public class Task1 {
     }
 
     @Test
-    public void correctSquareRootWithoutRemainder() {
+    public void correctSquareRoot() {
 //        TODO
-//        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 2 is square root of 4),
-//        then and press submit and check that correct no error is seen and check that square root is calculated correctly
-    }
-
-    @Test
-    public void correctSquareRootWithRemainder() {
-//        TODO
-//        enter a number between 50 and 100 digit in the input (square root of which doesn't have a remainder, e.g. 1.732.. is square root of 3) and press submit,
-//        then check that correct no error is seen and check that square root is calculated correctly
+//        enter a number between 50 and 100 digit in the input, then press submit
+//        and check that no error is seen and that square root is calculated correctly
+//        NOTE: input value is hardcoded, but square root used in assertions should be calculated in code
     }
 }
