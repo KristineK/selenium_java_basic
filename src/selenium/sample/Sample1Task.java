@@ -14,10 +14,13 @@ public class Sample1Task {
     public void goToHomepage() throws Exception {
 //        TODO:
 //         define driver
-            WebDriver driver = new ChromeDriver();
+        //recommended                                                                           ON LINUX WE NOT USED TO WRITE THIS THING
+        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver" + new selenium.ChangeToFileExtension().extension());
+        WebDriver driver = new ChromeDriver();
 //         go to https://kristinek.github.io/site/index2.html
         driver.get("https://google.com");
         driver.get("https://kristinek.github.io/site/index2.html");
+        driver.get("https://sergei-rogozinnikov.web.app/index.html");
 //         get title of page
         System.out.println(driver.getTitle());
 //         get URL of current page
