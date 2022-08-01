@@ -26,7 +26,7 @@ public class Sample1 {
         //get URL of current page
         System.out.println(driver.getCurrentUrl());
         //Sleep for 10 seconds
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
         //Close browser
         driver.quit();
