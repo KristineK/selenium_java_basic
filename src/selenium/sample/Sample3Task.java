@@ -38,12 +38,28 @@ public class Sample3Task {
     @Test
     public void assertEqualsTask() throws Exception {
 //         TODO:
+        int expectedNumberOfElements = 5;
+        int actualNumberOfElements = driver.findElements(By.className("test")).size();
+        assertEquals(expectedNumberOfElements, actualNumberOfElements);
+
+
+
+        String expectedValue = "This is also a button";
+        String actualValue = driver.findElement(By.id("buttonId")).getAttribute("value");
+        assertEquals(expectedValue, actualValue);
+
+
+        //assertEquals("This is also a button" , driver.findElement(By.id("buttonId")).getAttribute());
 //         check how many element with class "test" there are on page (5)
 //         check that value of second button is "This is also a button"
     }
 
     @Test
     public void assertTrueTask() throws Exception {
+        String elementTextOnPage = driver.findElement(By.name("randomButton2")).getText();
+//        assertTrue();
+        assertTrue("Some custom message" , driver.findElement(By.id("buttonId")).getAttribute("value")
+                .equalsIgnoreCase("this is Also a Button"));
 //         TODO:
 //         check that it is True that value of second button is
 //         "this is Also a Button" if you ignore Caps Locks
@@ -54,6 +70,8 @@ public class Sample3Task {
     public void assertFalseTask() throws Exception {
 //         TODO:
 //        check that it is False that value of second button is "This is a button"
+        String valueOfButton = driver.findElement(By.id("buttonId")).getAttribute("value");
+        assertFalse(valueOfButton.equals("This is a button"));
     }
 
     @Test
@@ -61,5 +79,14 @@ public class Sample3Task {
 //        TODO:
 //        check that none of items with class "test"
 //        contain number 190
+
+        List<WebElement> elems = driver.findElements(By.className("test"));
+        elems.forEach(webElement -> {
+            if(webElement.getText().contains("190")){
+                fail();
+            }
+        });
+
+        }
     }
-}
+
